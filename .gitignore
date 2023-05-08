@@ -1,0 +1,5 @@
+.cloud
+.storage
+deps
+home-assistant*
+.env

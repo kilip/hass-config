@@ -1,0 +1,30 @@
+version: "3"
+services:
+  postgres:
+    container_name: hass_postgres
+    image: postgres:latest
+    volumes:
+      - "db:/var/lib/postgresql/data"
+    ports:
+      - 5432:5432
+    restart: unless-stopped
+    env_file: ".env"
+    
+  hass:
+    container_name: hass_app
+    image: ghcr.io/onedr0p/home-assistant:2023.5.2
+    #image: ghcr.io/kilip/home-assistant
+    build: .
+    restart: unless-stopped
+    volumes:
+      - "./:/config"
+    ports:
+      - 8123:8123
+    env_file: ".env"
+    user: "1000:1000"
+    depends_on:
+      - postgres
+
+volumes:
+  db:
+    driver: local
