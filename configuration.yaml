@@ -24,4 +24,20 @@ homeassistant:
   unit_system: metric
   time_zone: Asia/Makassar
   country: ID
+  packages: !include packages/package.yaml
 
+utility_meter:
+  daily_energy:
+    name: Daily Energy
+    source: sensor.em_main_energy_today
+    cycle: daily
+
+input_number:
+  energy_tariff:
+    name: Energy Tariff
+    initial: 1444.7
+    mode: box
+    min: 1000
+    max: 10000
+    step: 0.1
+    unit_of_measurement: IDR/kWh

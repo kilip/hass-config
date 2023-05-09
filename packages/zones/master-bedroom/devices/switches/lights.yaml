@@ -1,0 +1,9 @@
+platform: group
+unique_id: 'mbr_lights'
+name: Master Bedroom Lights
+entities:
+  - switch.mbr_l1
+  - switch.mbr_l2
+  - switch.mbr_l3
+  - switch.mbr_l4
+  - switch.mbr_l5
