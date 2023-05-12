@@ -1,7 +1,8 @@
 influxdb:
   api_version: 2
   ssl: true
-  host: https://influxdb.itstoni.com
+  host: !env_var INFLUXDB_HOST
+  port: !env_var INFLUXDB_PORT
   token: !env_var INFLUXDB_TOKEN
   organization: !env_var INFLUXDB_ORGANIZATION
   bucket: hass
