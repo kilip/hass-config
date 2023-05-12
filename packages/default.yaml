@@ -1,7 +1,9 @@
-automation: !include_dir_list automations
+automation: !include_dir_merge_list automations
 script: !include_dir_merge_named scripts
 shell_command: !include_dir_merge_named shell
 light: !include_dir_list devices/lights/
 switch: !include_dir_list devices/switches/
 sensor: !include_dir_list devices/sensors/
 utility_meter: !include_dir_merge_named devices/utility-meter
+climate: !include_dir_list devices/climate/
+mqtt: !include_dir_merge_named devices/mqtt/

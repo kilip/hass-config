@@ -1,0 +1,25 @@
+influxdb:
+  api_version: 2
+  ssl: true
+  host: https://influxdb.itstoni.com
+  token: !env_var INFLUXDB_TOKEN
+  organization: !env_var INFLUXDB_ORGANIZATION
+  bucket: hass
+  tags:
+    source: eros
+  tags_attributes:
+    - friendly_name
+  default_measurement: units
+  exclude:
+    entities:
+      - zone.home
+    domains:
+      - persistent_notification
+      - person
+  include:
+    domains:
+      - sensor
+      - binary_sensor
+      - sun
+    entities:
+      - weather.home

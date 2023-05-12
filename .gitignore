@@ -3,3 +3,6 @@
 deps
 home-assistant*
 .env
+ga-service-account.json
+personal
+.bash_history

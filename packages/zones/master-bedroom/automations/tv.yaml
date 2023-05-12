@@ -1,0 +1,49 @@
+---
+- id: tv_turned_on
+  alias: "TV turned on"
+  trigger:
+  - platform: state
+    entity_id: switch.mbr_s4
+    from: "off"
+    to: "on"
+  action:
+  - delay:
+      seconds: 15
+  - service: mqtt.publish
+    data:
+      topic: cmnd/mbr-ir-blaster/irsend
+      payload: >-
+        {"Protocol":"SHARP","Bits":15,"Data":"0x4322","DataLSB":"0xC244","Repeat":0}
+  - delay:
+      seconds: 1
+  - service: mqtt.publish
+    data:
+      topic: cmnd/mbr-ir-blaster/irsend
+      payload: >-
+        {"Protocol":"SHARP","Bits":15,"Data":"0x4012","DataLSB":"0x248","Repeat":0}
+  - delay:
+      seconds: 1
+  - service: mqtt.publish
+    data:
+      topic: cmnd/mbr-ir-blaster/irsend
+      payload: >-
+        {"Protocol":"SHARP","Bits":15,"Data":"0x412A","DataLSB":"0x8254","Repeat":0}
+
+  #- alias: "turn on mi box"
+  #  service: switch.turn_on
+  #  target:
+  #    entity_id: switch.mbr_s3
+#- id: tv_turned_off
+#  alias: TV turned off
+#  trigger:
+#  - platform: state
+#    entity_id: switch.mbr_s4
+#    from: "on"
+#    to: "off"
+#  action:
+#  - delay:
+#      seconds: 15
+#  - alias: "turn off mi box"
+#    service: switch.turn_off
+#    target:
+#      entity_id: switch.mbr_s3

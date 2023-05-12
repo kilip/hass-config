@@ -1,0 +1,21 @@
+---
+- id: ac_turned_on
+  alias: "AC turned on"
+  trigger:
+  - platform: state
+    entity_id: switch.ac
+    from: "off"
+    to: "on"
+  action:
+  - service: mqtt.publish # clean: on
+    data:
+      topic: cmnd/mbr-ir-blaster/irsend
+      payload: >-
+        {"Protocol":"LG","Bits":28,"Data":"0x88C00B7","DataLSB":"0x103100ED","Repeat":0}
+  - delay:
+      seconds: 1
+  - service: mqtt.publish # eco: on
+    data:
+      topic: cmnd/mbr-ir-blaster/irsend
+      payload: >-
+        {"Protocol":"LG","Bits":28,"Data":"0x8810045","DataLSB":"0x108100A2","Repeat":0}
