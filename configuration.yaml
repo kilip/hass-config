@@ -26,12 +26,6 @@ homeassistant:
   country: ID
   packages: !include packages/package.yaml
 
-utility_meter:
-  daily_energy:
-    name: Daily Energy
-    source: sensor.em_main_energy_today
-    cycle: daily
-
 input_number:
   energy_tariff:
     name: Energy Tariff

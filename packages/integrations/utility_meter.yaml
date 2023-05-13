@@ -1,0 +1,9 @@
+utility_meter:
+  daily_energy:
+    name: Daily Energy
+    source: sensor.em_main_energy_today
+    cycle: daily
+  homelab_energy:
+    name: Homelab Energy
+    source: sensor.em_homelab_energy_today
+    cycle: daily
