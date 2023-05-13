@@ -1,3 +1,4 @@
+---
 google_assistant:
   project_id: hestia-50327
   service_account: !include ./ga-service-account.json
