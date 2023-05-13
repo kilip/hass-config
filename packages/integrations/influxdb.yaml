@@ -7,7 +7,7 @@ influxdb:
   organization: !env_var INFLUXDB_ORGANIZATION
   bucket: hass
   tags:
-    source: eros
+    source: !env_var INFLUXDB_SOURCE
   tags_attributes:
     - friendly_name
   default_measurement: units
