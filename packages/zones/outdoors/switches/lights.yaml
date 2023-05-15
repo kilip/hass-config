@@ -1,0 +1,7 @@
+platform: group
+unique_id: 'mbr_outdoors'
+name: Master Bedroom Lights
+entities:
+  - switch.lr_outdoor
+  - switch.mbr_outdoor1
+  - switch.mbr_outdoor2
