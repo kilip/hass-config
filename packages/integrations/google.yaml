@@ -25,3 +25,7 @@ google_assistant:
       name: Office
       expose: true
       room: Living Room
+    light.mbr_ambilight:
+      name: Ambilight
+      expose: true
+      room: Master_Bedroom
