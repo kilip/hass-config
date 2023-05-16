@@ -8,4 +8,8 @@ google_assistant:
     switch.master_bedroom_lights:
       name: Bedroom
       expose: true
-      room: Master Bed Room
+      room: Master Bedroom
+    switch.mbr_s4:
+      name: TV
+      expose: true
+      room: Master Media
