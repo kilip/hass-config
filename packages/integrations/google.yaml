@@ -28,4 +28,4 @@ google_assistant:
     light.mbr_ambilight:
       name: Ambilight
       expose: true
-      room: Master_Bedroom
+      room: Master Bedroom
