@@ -12,7 +12,7 @@ services:
     
   hass:
     container_name: hass_app
-    image: ghcr.io/onedr0p/home-assistant:2023.5.2
+    image: ghcr.io/onedr0p/home-assistant:2023.5.3
     #image: ghcr.io/kilip/home-assistant
     build: .
     restart: unless-stopped
