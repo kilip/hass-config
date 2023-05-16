@@ -1,7 +1,0 @@
-platform: group
-unique_id: 'outdoors_light'
-name: Outdoors Light
-entities:
-  - switch.lr_outdoor
-  - switch.mbr_outdoor1
-  - switch.mbr_outdoor2

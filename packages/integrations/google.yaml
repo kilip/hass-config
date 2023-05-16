@@ -5,7 +5,7 @@ google_assistant:
   report_state: true
   expose_by_default: false
   entity_config:
-    switch.master_bedroom_lights:
+    light.master_bedroom_lights:
       name: Bedroom
       expose: true
       room: Master Bedroom
@@ -13,3 +13,15 @@ google_assistant:
       name: TV
       expose: true
       room: Master Media
+    light.outdoor_lights:
+      name: Outdoors
+      expose: true
+      room: Outdoors
+    light.lr_store:
+      name: Store
+      expose: true
+      room: Living Room
+    light.lr_office:
+      name: Office
+      expose: true
+      room: Living Room

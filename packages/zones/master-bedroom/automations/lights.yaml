@@ -3,7 +3,7 @@
   alias: Bedroom lights turned on
   trigger:
     - platform: state
-      entity_id: switch.bedroom_lights
+      entity_id: light.master_bedroom_lights
       from: "off"
       to: "on"
   action:
@@ -16,7 +16,7 @@
   alias: Bedroom lights turned off
   trigger:
     - platform: state
-      entity_id: switch.bedroom_lights
+      entity_id: light.master_bedroom_lights
       from: "on"
       to: "off"
   condition:
